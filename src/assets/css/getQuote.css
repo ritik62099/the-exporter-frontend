@@ -1,0 +1,61 @@
+.get-quote-section {
+    padding: 60px 20px;
+    background-color: #f7f9fc;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .get-quote-section h2 {
+    font-size: 2.2rem;
+    color: #003366;
+    margin-bottom: 30px;
+  }
+  
+  .quote-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #003366;
+    font-weight: 500;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="date"],
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e68700;
+  }
+  

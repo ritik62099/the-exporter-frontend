@@ -13,12 +13,12 @@ const ExporterNavbar = () => {
         <div className="navbar-brand">🌍 ExporterPro</div>
         <div className="navbar-links-right">
         <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Track</a>
-          <a href="#">Get Quote</a>
-          <a href="#">Contact</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/track-shipment">Track</a>
+          <a href="/get-quote">Get Quote</a>
+          <a href="/contact">Contact</a>
         </div>
 
         <div className="nav-right">

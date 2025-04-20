@@ -1,0 +1,68 @@
+.track-section {
+    padding: 60px 20px;
+    background-color: #f2f6fc;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .track-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #003366;
+  }
+  
+  .track-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .track-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .track-form button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .track-form button:hover {
+    background-color: #e68700;
+  }
+  
+  .status-box {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .status-box h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .status-box p {
+    color: #333;
+    margin: 6px 0;
+  }
+  

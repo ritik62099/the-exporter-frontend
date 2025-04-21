@@ -10,9 +10,14 @@ import ServicesSection from "./pages/Services.jsx";
 import GetQuoteForm from "./pages/GetQuote.jsx";
 import TrackShipment from "./pages/TrackShipment.jsx";
 import Contact from "./pages/Contact.jsx";
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx";
+
+import { AuthProvider } from "./auth/AuthContext.jsx";
 function App() {
   return (
     <>
+    <AuthProvider>
     <Router>
       <Navbar />
       {/* <Home/> */}
@@ -23,9 +28,12 @@ function App() {
         <Route path="/get-quote" element={<GetQuoteForm />} />
         <Route path="/track-shipment" element={<TrackShipment />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
      <Footer/>
     </Router>
+    </AuthProvider>
     </>
   );
 }

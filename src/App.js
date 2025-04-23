@@ -12,6 +12,7 @@ import TrackShipment from "./pages/TrackShipment.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
+import ExporterLanding from "./pages/ExporterLanding.jsx";
 
 import { AuthProvider } from "./auth/AuthContext.jsx";
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/pre-signup" element={<ExporterLanding />} />
       </Routes>
      <Footer/>
     </Router>

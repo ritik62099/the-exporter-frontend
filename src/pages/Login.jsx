@@ -4,7 +4,7 @@ import '../assets/css/login.css';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const { login } = useAuth(); // 👈 get login function from context
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -28,13 +28,12 @@ const Login = () => {
         alert(data.msg || "Login failed");
       } else {
         alert("Login successful!");
-
-        // Save token and update AuthContext
         localStorage.setItem("token", data.token);
-        login(data.user); // 👈 this sets the user in context
+        login(data.user);
 
-        // Redirect to homepage
-        window.location.href = "/";
+        const redirectPath = localStorage.getItem("redirectAfterLogin") || "/";
+        localStorage.removeItem("redirectAfterLogin");
+        window.location.href = redirectPath;
       }
     } catch (error) {
       console.error(error);

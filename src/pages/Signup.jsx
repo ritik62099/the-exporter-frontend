@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../assets/css/signup.css';
+import { useAuth } from '../auth/AuthContext';
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -10,18 +11,19 @@ const Signup = () => {
     confirmPassword: '',
   });
 
+  const { login } = useAuth(); // 👈 Import login function
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (form.password !== form.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-  
+
     try {
       const res = await fetch("http://localhost:5000/api/auth/signup", {
         method: "POST",
@@ -35,21 +37,28 @@ const Signup = () => {
           password: form.password,
         }),
       });
-  
+
       const data = await res.json();
-  
+
       if (!res.ok) {
         alert(data.msg || "Signup failed");
       } else {
         alert("Signup successful!");
-        window.location.href = "/login"; // redirect to login
+
+        // ✅ Save token, auto-login
+        localStorage.setItem("token", data.token); // token from server
+        login(data.user); // auto-login using context
+
+        // ✅ Redirect to saved page
+        const redirectPath = localStorage.getItem("redirectAfterLogin") || "/";
+        localStorage.removeItem("redirectAfterLogin");
+        window.location.href = redirectPath;
       }
     } catch (error) {
       console.error(error);
       alert("Server error");
     }
   };
-  
 
   return (
     <div className="signup-container">
